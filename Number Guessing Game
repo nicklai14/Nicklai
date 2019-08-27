@@ -1,0 +1,19 @@
+# Number Guessing Game!!
+
+import random
+secretNumber = random.randrange(1, 11)
+print(secretNumber)
+
+tries = 0
+guess = 0
+
+while guess != secretNumber:
+  guess = int(input("Enter a number between 1 and 10: "))
+  tries = tries + 1
+  if guess > secretNumber:
+    print("You're a little high. Try again")
+  elif guess < secretNumber:
+    print("You're a bit low, try again")
+  else:
+    print("You got it! the secret number was: ", secretNumber)
+print("Number of tries: ", tries)
